@@ -1,0 +1,57 @@
+b9a2 - some kind of map data (tile/graphical)
+210d3 - unknown
+21225 - unknown
+38fbf - some kind of sprite data (graphical)
+51074 - unknown
+b7fff - unknown
+b81ff - unknown
+b83ff - unknown
+
+38bef - npcs and events
+
+b99e - some kind of map data (tile/graphical)
+
+"Omitsu" - "1e392b"
+First line: 1b5337
+            1b5362
+Pointer to first line: 1b5594
+Pointer to first message (name + line): 3C28F
+    1b557E??
+    02b5 is some kind of magic message header?
+1b1b0d - "たいむましん"
+
+B2 ??? Various control codes?
+E? - Show next character ?+3 times
+02-0F message delay????? Other control codes?
+00 end message?
+Anything else?: display character
+b2 54 1e - message delay
+03 00 - message end
+FX - stored word of length X+3 (only works up to F4?)
+
+1a8000 - first set of events?
+1b0000 - more events, but most significant bit is 0x80 for some reason
+    lasts to 1b1308
+1b1308 - dialogue?
+1addd6
+1ade98
+1adf82
+38a10 - start of pointers to event blocks?
+38d10 - pointer to event block
+    1adfc0 (start of event block, with metadata)
+        num_a num_b [pointers] [events]
+            number of pointers = (num_a * num_b) + 2
+38de2 -> 8778
+    B6 pointers don't have a second pointer table, they just go straight to events?
+1ae0ac (location of event (12 bytes), pointer to message)
+1ee10c (location of message)
+stored word
+1ee129: f0389b -> 1e9b38
+    anta: 1a 47 29 18 (18 is a space, not a terminating code?)
+starts at 1e8000 with した 81 」
+
+1e986a
+983c
+e21e
+e3fe
+
